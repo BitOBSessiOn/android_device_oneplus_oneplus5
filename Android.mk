@@ -33,6 +33,7 @@ subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
 $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 
 #include $(call all-makefiles-under,$(LOCAL_PATH))
+LOCAL_C_INCLUDES += hardware/qcom/msm8998/kernel-headers
 
 include $(CLEAR_VARS)
 

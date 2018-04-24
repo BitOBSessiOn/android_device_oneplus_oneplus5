@@ -21,7 +21,10 @@
 #
 $(call inherit-product, device/oneplus/oneplus5/hidl.mk)
 $(call inherit-product, vendor/oneplus/oneplus5/device-vendor.mk)
-$(call inherit-product, vendor/omni/config/phone-xxhdpi-4096-dalvik-heap.mk)
+#$(call inherit-product, vendor/bliss/config/phone-xxhdpi-4096-dalvik-heap.mk)
+
+SRC_MEDIA_HAL_DIR := hardware/qcom/media-caf/msm8998
+SRC_DISPLAY_HAL_DIR := hardware/qcom/display-caf/msm8998
 
 DEVICE_PACKAGE_OVERLAYS += device/oneplus/oneplus5/overlay/common
 
@@ -302,8 +305,8 @@ PRODUCT_PACKAGES += \
     vr.msm8998 \
     thermal.msm8998
 
-PRODUCT_PACKAGES += \
-    DeviceParts
+#PRODUCT_PACKAGES += \
+#    DeviceParts
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \

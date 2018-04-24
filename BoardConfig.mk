@@ -63,7 +63,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_APPEND_DTB := true
+#TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
 TARGET_KERNEL_CONFIG := omni_oneplus5_defconfig
 
@@ -253,7 +253,7 @@ DEVICE_MATRIX_FILE := $(BOARD_PATH)/compatibility_matrix.xml
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
-TARGET_CRYPTFS_HW_PATH := $(BOARD_PATH)/cryptfs_hw
+#TARGET_CRYPTFS_HW_PATH := $(BOARD_PATH)/cryptfs_hw
 
 #vold
 TARGET_KERNEL_HAVE_NTFS := true
@@ -265,7 +265,7 @@ BOARD_USES_QCNE := true
 
 # selinux
 include device/qcom/sepolicy/sepolicy.mk
-include vendor/omni/sepolicy/sepolicy.mk
+#include vendor/bliss/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(BOARD_PATH)/sepolicy/vendor
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(BOARD_PATH)/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(BOARD_PATH)/sepolicy/private

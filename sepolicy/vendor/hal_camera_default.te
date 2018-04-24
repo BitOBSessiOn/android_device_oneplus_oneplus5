@@ -6,7 +6,7 @@ allow hal_camera_default system_server:unix_stream_socket read;
 
 hal_client_domain(hal_camera_default, hal_graphics_composer)
 allow hal_camera camera_data_file:sock_file write;
-
+#hal_camera_default serialno_prop:file
 binder_use(hal_camera_default)
 binder_call(hal_camera_default, binderservicedomain)
 binder_call(hal_camera_default, appdomain)
@@ -21,7 +21,7 @@ allow hal_camera_default media_rw_data_file:file { open read getattr };
 allow hal_camera_default storage_file:dir { search };
 
 allow hal_camera_default persist_file:file read;
-allow hal_camera_default serialno_prop:file { open read getattr };
+#allow hal_camera_default serialno_prop:file { open read getattr };
 
 
 allow hal_camera_default debug_prop:file { read open getattr };
