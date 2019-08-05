@@ -36,4 +36,7 @@
          that can be set by the user. -->
     <integer name="config_screenBrightnessDim">6</integer>
 
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_enableSmartPixels">true</bool>
+
 </resources>
